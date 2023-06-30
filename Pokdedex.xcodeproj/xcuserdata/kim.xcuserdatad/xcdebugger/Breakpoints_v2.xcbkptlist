@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "D330C9BA-3836-4116-BA26-09ACC319BCCC"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AB1F7676-51C6-4EBD-A710-9739F6E6EF9A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pokdedex/Controller/PokemonDetailVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "PokemonDetailVC"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "AB1F7676-51C6-4EBD-A710-9739F6E6EF9A - 18c1f0158d5921a3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Pokdedex.PokemonDetailVC.pokemon.getter : Swift.Optional&lt;Pokdedex.Pokemon&gt;"
+                  moduleName = "Pokdedex"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kim/Documents/Projects/RestAPI/Pokdedex/Pokdedex/Controller/PokemonDetailVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "88">
+               </Location>
+               <Location
+                  uuid = "AB1F7676-51C6-4EBD-A710-9739F6E6EF9A - 75e95b3192b31af"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Pokdedex.PokemonDetailVC.pokemon.setter : Swift.Optional&lt;Pokdedex.Pokemon&gt;"
+                  moduleName = "Pokdedex"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kim/Documents/Projects/RestAPI/Pokdedex/Pokdedex/Controller/PokemonDetailVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "108">
+               </Location>
+               <Location
+                  uuid = "AB1F7676-51C6-4EBD-A710-9739F6E6EF9A - f4b48c1ef9fac5c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Pokdedex.PokemonDetailVC.pokemon.modify : Swift.Optional&lt;Pokdedex.Pokemon&gt;"
+                  moduleName = "Pokdedex"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kim/Documents/Projects/RestAPI/Pokdedex/Pokdedex/Controller/PokemonDetailVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "AB1F7676-51C6-4EBD-A710-9739F6E6EF9A - 86cb157bbbc9fd13"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Pokdedex.PokemonDetailVC.pokemon.modify : Swift.Optional&lt;Pokdedex.Pokemon&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "Pokdedex"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kim/Documents/Projects/RestAPI/Pokdedex/Pokdedex/Controller/PokemonDetailVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "AB1F7676-51C6-4EBD-A710-9739F6E6EF9A - 694d4168e4844f4e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Pokdedex.PokemonDetailVC.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; Pokdedex.PokemonDetailVC"
+                  moduleName = "Pokdedex"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kim/Documents/Projects/RestAPI/Pokdedex/Pokdedex/Controller/PokemonDetailVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "128">
+               </Location>
+               <Location
+                  uuid = "AB1F7676-51C6-4EBD-A710-9739F6E6EF9A - 3ee1d53f104bde0a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Pokdedex.PokemonDetailVC.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Pokdedex.PokemonDetailVC&gt;"
+                  moduleName = "Pokdedex"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kim/Documents/Projects/RestAPI/Pokdedex/Pokdedex/Controller/PokemonDetailVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "104">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6E28E7BA-C814-4824-B28E-9A325A9594B7"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pokdedex/Controller/PokemonDetailVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "PokemonDetailVC"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "6E28E7BA-C814-4824-B28E-9A325A9594B7 - 48f4633545836b3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Pokdedex.PokemonDetailVC.nameLbl.getter : Swift.Optional&lt;__C.UILabel&gt;"
+                  moduleName = "Pokdedex"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kim/Documents/Projects/RestAPI/Pokdedex/Pokdedex/Controller/PokemonDetailVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "88">
+               </Location>
+               <Location
+                  uuid = "6E28E7BA-C814-4824-B28E-9A325A9594B7 - 63fd44a0b8a2db3f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Pokdedex.PokemonDetailVC.nameLbl.setter : Swift.Optional&lt;__C.UILabel&gt;"
+                  moduleName = "Pokdedex"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kim/Documents/Projects/RestAPI/Pokdedex/Pokdedex/Controller/PokemonDetailVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "108">
+               </Location>
+               <Location
+                  uuid = "6E28E7BA-C814-4824-B28E-9A325A9594B7 - a449caae70ceb84e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Pokdedex.PokemonDetailVC.nameLbl.modify : Swift.Optional&lt;__C.UILabel&gt;"
+                  moduleName = "Pokdedex"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kim/Documents/Projects/RestAPI/Pokdedex/Pokdedex/Controller/PokemonDetailVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "6E28E7BA-C814-4824-B28E-9A325A9594B7 - ac639d9979a983f2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Pokdedex.PokemonDetailVC.nameLbl.modify : Swift.Optional&lt;__C.UILabel&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "Pokdedex"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kim/Documents/Projects/RestAPI/Pokdedex/Pokdedex/Controller/PokemonDetailVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "28">
+               </Location>
+               <Location
+                  uuid = "6E28E7BA-C814-4824-B28E-9A325A9594B7 - 694d4168e4844f6f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Pokdedex.PokemonDetailVC.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; Pokdedex.PokemonDetailVC"
+                  moduleName = "Pokdedex"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kim/Documents/Projects/RestAPI/Pokdedex/Pokdedex/Controller/PokemonDetailVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "188">
+               </Location>
+               <Location
+                  uuid = "6E28E7BA-C814-4824-B28E-9A325A9594B7 - 3ee1d53f104bde2b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Pokdedex.PokemonDetailVC.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Pokdedex.PokemonDetailVC&gt;"
+                  moduleName = "Pokdedex"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kim/Documents/Projects/RestAPI/Pokdedex/Pokdedex/Controller/PokemonDetailVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "164">
+               </Location>
+               <Location
+                  uuid = "6E28E7BA-C814-4824-B28E-9A325A9594B7 - 694d4168e4844ed1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Pokdedex.PokemonDetailVC.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; Pokdedex.PokemonDetailVC"
+                  moduleName = "Pokdedex"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kim/Documents/Projects/RestAPI/Pokdedex/Pokdedex/Controller/PokemonDetailVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "204">
+               </Location>
+               <Location
+                  uuid = "6E28E7BA-C814-4824-B28E-9A325A9594B7 - 3ee1d53f104bdf95"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Pokdedex.PokemonDetailVC.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Pokdedex.PokemonDetailVC&gt;"
+                  moduleName = "Pokdedex"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kim/Documents/Projects/RestAPI/Pokdedex/Pokdedex/Controller/PokemonDetailVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "180">
+               </Location>
+               <Location
+                  uuid = "6E28E7BA-C814-4824-B28E-9A325A9594B7 - 694d4168e4844ed1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Pokdedex.PokemonDetailVC.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; Pokdedex.PokemonDetailVC"
+                  moduleName = "Pokdedex"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kim/Documents/Projects/RestAPI/Pokdedex/Pokdedex/Controller/PokemonDetailVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "316">
+               </Location>
+               <Location
+                  uuid = "6E28E7BA-C814-4824-B28E-9A325A9594B7 - 3ee1d53f104bdf95"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Pokdedex.PokemonDetailVC.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Pokdedex.PokemonDetailVC&gt;"
+                  moduleName = "Pokdedex"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kim/Documents/Projects/RestAPI/Pokdedex/Pokdedex/Controller/PokemonDetailVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "292">
+               </Location>
+               <Location
+                  uuid = "6E28E7BA-C814-4824-B28E-9A325A9594B7 - 694d4168e4844ef2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Pokdedex.PokemonDetailVC.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; Pokdedex.PokemonDetailVC"
+                  moduleName = "Pokdedex"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kim/Documents/Projects/RestAPI/Pokdedex/Pokdedex/Controller/PokemonDetailVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "308">
+               </Location>
+               <Location
+                  uuid = "6E28E7BA-C814-4824-B28E-9A325A9594B7 - 3ee1d53f104bdfb6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Pokdedex.PokemonDetailVC.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Pokdedex.PokemonDetailVC&gt;"
+                  moduleName = "Pokdedex"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kim/Documents/Projects/RestAPI/Pokdedex/Pokdedex/Controller/PokemonDetailVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "284">
+               </Location>
+               <Location
+                  uuid = "6E28E7BA-C814-4824-B28E-9A325A9594B7 - 694d4168e4844ed1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Pokdedex.PokemonDetailVC.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; Pokdedex.PokemonDetailVC"
+                  moduleName = "Pokdedex"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kim/Documents/Projects/RestAPI/Pokdedex/Pokdedex/Controller/PokemonDetailVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "308">
+               </Location>
+               <Location
+                  uuid = "6E28E7BA-C814-4824-B28E-9A325A9594B7 - 3ee1d53f104bdf95"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Pokdedex.PokemonDetailVC.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Pokdedex.PokemonDetailVC&gt;"
+                  moduleName = "Pokdedex"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kim/Documents/Projects/RestAPI/Pokdedex/Pokdedex/Controller/PokemonDetailVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "284">
+               </Location>
+               <Location
+                  uuid = "6E28E7BA-C814-4824-B28E-9A325A9594B7 - 694d4168e4844ed1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Pokdedex.PokemonDetailVC.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; Pokdedex.PokemonDetailVC"
+                  moduleName = "Pokdedex"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kim/Documents/Projects/RestAPI/Pokdedex/Pokdedex/Controller/PokemonDetailVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "300">
+               </Location>
+               <Location
+                  uuid = "6E28E7BA-C814-4824-B28E-9A325A9594B7 - 3ee1d53f104bdf95"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Pokdedex.PokemonDetailVC.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Pokdedex.PokemonDetailVC&gt;"
+                  moduleName = "Pokdedex"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kim/Documents/Projects/RestAPI/Pokdedex/Pokdedex/Controller/PokemonDetailVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "276">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

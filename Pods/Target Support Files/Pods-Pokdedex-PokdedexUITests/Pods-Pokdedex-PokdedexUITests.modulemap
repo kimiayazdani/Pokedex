@@ -1,0 +1,6 @@
+framework module Pods_Pokdedex_PokdedexUITests {
+  umbrella header "Pods-Pokdedex-PokdedexUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
