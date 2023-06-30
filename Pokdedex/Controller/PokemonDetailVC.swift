@@ -32,13 +32,16 @@ class PokemonDetailVC: UIViewController {
     @IBOutlet weak var typeLbl: UILabel!
     @IBOutlet weak var DescriptionLbl: UILabel!
     @IBOutlet weak var mainImg: UIImageView!
+    @IBOutlet weak var littleArrowImg: UIImageView!
     
+    @IBOutlet weak var normalAbilityLbl: UILabel!
     
-    
+    var overviewMode = true
     var pokemon: Pokemon!
 
     // Override View Functions
     override func viewDidLoad() {
+        print("i am in view did load")
         super.viewDidLoad()
         
         idLbl.text = "\(pokemon.pokedexId)"
@@ -46,13 +49,37 @@ class PokemonDetailVC: UIViewController {
         
         pokedoxHollow.text = pokemon.name
         pkedoxSolid.text = pokemon.name
-        pokemon.downloadPokemonDetails {
-            self.updateUI()
+        
+        let currentImgURL = URL(string: "\(IMAGE_BASE_URL)\(pokemon.pokedexId).png")!
+        DispatchQueue.global().async {
+            do {
+                let data = try Data(contentsOf: currentImgURL)
+                    DispatchQueue.main.sync {
+                        self.currentEvoImg.image = UIImage(data: data)
+                    }
+            } catch  {
+                print("couldn't load the currentEvo image:")
+                self.currentEvoImg.image = UIImage(named: "\(self.pokemon.pokedexId)")
+            }
         }
         
-        pokemon.downloadPokemonDescriptions {
-            self.updateDescriptionUI()
+        pokemon.downloadPokemonDetails {
+            self.updateUI()
+            
+
+                self.pokemon.loadEvolutionData {
+                    self.updateEvolutionImg()
+                }
+            
         }
+        
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(nextEvoTapped(_:)))
+         nextEvoImg.addGestureRecognizer(tapGesture)
+         nextEvoImg.isUserInteractionEnabled = true
+        
+
+
     }
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
@@ -68,6 +95,15 @@ class PokemonDetailVC: UIViewController {
         dismiss(animated: true)
     }
     
+    @objc func nextEvoTapped(_ sender: UITapGestureRecognizer) {
+        print(pokemon.nextEvoName, pokemon.nextEvoId, pokemon.pokedexId)
+        if pokemon.nextEvoName != "" , pokemon.nextEvoId != "\(self.pokemon.pokedexId)"{
+            print("here I am")
+            let pokeNew = Pokemon(_name: pokemon.nextEvoName, _pokedexId: Int(pokemon.nextEvoId))
+            self.pokemon = pokeNew
+            self.viewDidLoad()
+        }
+    }
     // Utilities
     private func updateViewHeightForOrientation() {
            if traitCollection.verticalSizeClass == .compact {
@@ -91,11 +127,35 @@ class PokemonDetailVC: UIViewController {
         baseAttackLbl.text = pokemon.attack
         defenseLbl.text = pokemon.defense
         typeLbl.text = pokemon.type
-    }
-    
-    func updateDescriptionUI() {
         DescriptionLbl.text = pokemon.description
+        nextEvoLbl.text = pokemon.nextEvolutionTxt
+        
+
+        
     }
 
+    
+    func updateEvolutionImg() {
+        if self.pokemon.nextEvoSprite == "" {
+            self.nextEvoImg.isHidden = true
+            self.littleArrowImg.isHidden = true
+        }
+        else {
+            let nextImgURL = URL(string: self.pokemon.nextEvoSprite)!
+            
+            DispatchQueue.global().async {
+                do {
+                    let data = try Data(contentsOf: nextImgURL)
+                    DispatchQueue.main.sync {
+                        self.nextEvoImg.image = UIImage(data: data)
+                    }
+                } catch  {
+                    print("couldn't load the nextEvo image:")
+                    self.nextEvoImg.image = UIImage(named: "\(self.pokemon.nextEvoId)")
+                }
+            }
+            
+        }
+    }
 
 }

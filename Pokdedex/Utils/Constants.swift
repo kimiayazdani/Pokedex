@@ -16,4 +16,6 @@ let URL_DESCRIPTIONS = "/api/v2/characteristic/"
 
 let URL_GLITCH_API = "https://pokeapi.glitch.me/v1/pokemon/"
 
+let IMAGE_BASE_URL = "https://nexus.traction.one/images/pokemon/pokemon/"
+
 typealias downloadComplete = () -> ()

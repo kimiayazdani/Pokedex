@@ -19,9 +19,12 @@ class Pokemon {
     private var _weight: String!
     private var _attack: String!
     private var _nextEvolutionTxt: String!
+    private var _nextEvoName: String!
+    private var _nextEvoId: String!
+    private var _nextEvoSprite: String!
     
     private var _pokemonURL: String!
-    private var _descriptionURL: String!
+    
      
     var name: String {
         return _name.capitalized
@@ -33,7 +36,7 @@ class Pokemon {
     
     var nextEvolutionTxt: String {
         if _nextEvolutionTxt == nil {
-            _nextEvolutionTxt = "-"
+            _nextEvolutionTxt = "No Known Evolutions"
         }
         return _nextEvolutionTxt
     }
@@ -53,7 +56,7 @@ class Pokemon {
     }
     
     var attack: String {
-        // returns the first ability instead
+        // I am using normal ability instead of this.
         if _attack == nil {
             _attack = "-"
         }
@@ -75,23 +78,42 @@ class Pokemon {
     }
     
     var defense: String {
-        // I am using order instead of this.
+        // I am using hidden ability instead of this.
         if _defense == nil {
             _defense = "-"
         }
         return _defense
     }
     
+    var nextEvoId: String {
+        if _nextEvoId == nil {
+            return "\(pokedexId)"
+        }
+        return _nextEvoId
+    }
+    
+    var nextEvoSprite: String {
+        if _nextEvoSprite == nil {
+            return ""
+        }
+        return self._nextEvoSprite
+    }
+    
+    var nextEvoName: String {
+        if _nextEvoName == nil {
+            return ""
+        }
+        return self._nextEvoName
+    }
+    
     init(_name: String!, _pokedexId: Int!) {
         self._name = _name
         self._pokedexId = _pokedexId
         
-        self._pokemonURL = "\(URL_BASE)\(URL_POKEMON)\(self._pokedexId!)"
-        
-        
-        self._descriptionURL = "\(URL_BASE)\(URL_DESCRIPTIONS)\(self._pokedexId!)/"
         
         self._pokemonURL = "\(URL_GLITCH_API)\(self._pokedexId!)"
+        
+        
         
     }
     
@@ -99,105 +121,108 @@ class Pokemon {
         
         AF.request(self._pokemonURL).responseJSON { (response) in
             
-            if let dict = response.value as? Dictionary<String, AnyObject> {
-                print(dict)
-                
-                if let height = dict["height"] as? Int {
-                    self._height = "\(height)"
-                }
-                
-                if let weight = dict["weight"] as? Int {
-                    self._weight = "\(weight)"
-                }
+            if let dictList = response.value as? [Dictionary<String, AnyObject>] {
                 
                 
+                if dictList.count > 0 {
                     
-                if let attack = dict["attack"] as? Int {
-                    self._attack = "\(attack)"
-                }
-                
-                if let defense = dict["defense"] as? Int {
-                    self._defense = "\(defense)"
-                }
-                
-                if let types = dict["types"] as? [Dictionary<String,AnyObject>], types.count > 0 {
-                    if let type = types[0]["type"] as? Dictionary<String,AnyObject> {
-                        if let name = type["name"] as? String {
-                            self._type = name.capitalized
-                        }
+                    let dict = dictList[0]
+                    
+                    if let height = dict["height"] as? String {
+                        self._height = "\(height)"
                     }
                     
-                    if types.count > 1 {
-                        for x in 1..<types.count {
-                            if let typ = types[x]["type"] as? Dictionary<String, AnyObject> {
-                                if let name = typ["name"] as? String {
-                                    self._type += "/\(name.capitalized)"
-                                }
+                    if let weight = dict["weight"] as? String {
+                        self._weight = "\(weight)"
+                    }
+                    
+                    if let types = dict["types"] as? [String], types.count > 0 {
+                        self._type = types[0].capitalized
+                        
+                        
+                        if types.count > 1 {
+                            for x in 1..<types.count {
+                                self._type += "/\(types[x].capitalized)"
                             }
                         }
                     }
-                }
-                
-                
-                if let order = dict["order"] as? Int {
-                    self._defense = "\(order)"
-                }
-                
-                if let abilities = dict["abilities"] as? [Dictionary<String,AnyObject>] {
-                    if abilities.count > 0 {
-                        if  let ability = abilities[0]["ability"] as? Dictionary<String,AnyObject> {
-                            if let name = ability["name"] as? String {
-                                self._attack = name.capitalized
-                            }
-                            
+                    
+                    if let description = dict["description"] as? String {
+                        self._description = description
+                    }
+                    
+                   
+                    if let abilities = dict["abilities"] as? Dictionary<String,AnyObject> {
+                        if let normal = abilities["normal"] as? [String], normal.count > 0{
+                            self._attack = normal[0].capitalized
+                        }
+                        if let hidden = abilities["hidden"] as? [String], hidden.count > 0 {
+                            self._defense = hidden[0].capitalized
                         }
                     }
-                }
-                
-                
-            }
-            
-            completed()
-        }
-    }
-    
-    func downloadPokemonDescriptions(completed: @escaping downloadComplete) {
-        AF.request(self._descriptionURL).responseJSON { (response) in
-            
-            if let dict = response.value as? Dictionary<String, AnyObject> {
-                print(" at least I am here ... ")
-                if let descriptions = dict["descriptions"] as? [Dictionary<String, AnyObject>] {
                     
-                    print(" i reached this point ")
-                    if descriptions.count > 0 {
-                        if let desc = descriptions[0]["description"] as? String {
-                            self._description = desc
-                        }
-//
-                        if descriptions.count > 1 {
-                            for x in 1..<descriptions.count {
-                                if let lang = descriptions[x]["language"] as? Dictionary<String, AnyObject> {
-                                    if let name = lang["name"] as? String, name == "en" {
-                                        if let desc = descriptions[x]["description"] as? String {
-                                            self._description = "\(desc.capitalized)."
+                    if let family = dict["family"] as? Dictionary<String, AnyObject> {
+                        if let evolutionStage = family["evolutionStage"] as? Int {
+                            if let evolutionLineList = family["evolutionLine"] as? [String], evolutionLineList.count > 0 {
+                                self._nextEvolutionTxt = "Evolution Line: \(evolutionLineList[0].capitalized)"
+                                
+                                if evolutionLineList.count > 1 {
+                                    for x in 1..<evolutionLineList.count {
+                                        self._nextEvolutionTxt += " → \(evolutionLineList[x].capitalized)"
+                                        
+                                        if x == evolutionStage {
+                                            self._nextEvoName = evolutionLineList[x]
+                                            print(self._nextEvoName)
                                         }
-                                        break
+   
                                     }
                                 }
                             }
-                            
-
                         }
-                        
-                        
                     }
-                        
-                    
                 }
+                
             }
             
             completed()
         }
+        
+        
+        
     }
+    
+    func loadEvolutionData(completed: @escaping downloadComplete) {
+        print("why am I called so early? :(", self._nextEvoName)
+        
+        if let nextEvoName = self._nextEvoName as? String {
+            print("I am here with", nextEvoName)
+            AF.request("\(URL_GLITCH_API)\(nextEvoName)").responseJSON {(response) in
+                
+                if let dictList = response.value as? [Dictionary<String,AnyObject>], dictList.count > 0 {
+                    let dict = dictList[0]
+                    if let number = dict["number"] as? String {
+                        
+                        self._nextEvoId = number
+                        print(self._nextEvoId)
+                        print("self", self._nextEvoId, self._nextEvoName)
+                    }
+                    if let sprite = dict["sprite"] as? String {
+                        self._nextEvoSprite = sprite
+                        
+                        
+                    }
+                }
+                completed()
+            }
+        } else {
+            print("didn't find anything...")
+            completed()
+        }
+        
+        
+    }
+    
+    
+   
     
 }

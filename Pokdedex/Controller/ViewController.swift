@@ -82,7 +82,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PokeCell", for: indexPath) as? PokeCell{
             
             var pokemon = pokemons[indexPath.row]
-            if inSearchMode {
+            if inSearchMode == true {
                 pokemon = filteredPokemons[indexPath.row]
             }
             cell.configureCell(pokemon: pokemon)
@@ -93,7 +93,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         var pokemon = pokemons[indexPath.row]
-        if inSearchMode {
+        if inSearchMode == true {
             pokemon = filteredPokemons[indexPath.row]
         }
         performSegue(withIdentifier: "ShowPokeDetail", sender: pokemon)
@@ -125,7 +125,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             inSearchMode = true
             let lower = searchBar.text!.lowercased()
             
-            filteredPokemons = pokemons.filter({$0.name.range(of: lower) != nil})
+            filteredPokemons = pokemons.filter({$0.name.lowercased().contains(lower)})
             
             collection.reloadData()
         }
