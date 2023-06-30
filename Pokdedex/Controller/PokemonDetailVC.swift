@@ -34,15 +34,13 @@ class PokemonDetailVC: UIViewController {
     @IBOutlet weak var mainImg: UIImageView!
     @IBOutlet weak var littleArrowImg: UIImageView!
     
-    @IBOutlet weak var normalAbilityLbl: UILabel!
     
-    var overviewMode = true
     var pokemon: Pokemon!
 
     // Override View Functions
     override func viewDidLoad() {
-        print("i am in view did load")
         super.viewDidLoad()
+        self.updateViewHeightForOrientation()
         
         idLbl.text = "\(pokemon.pokedexId)"
         mainImg.image = UIImage(named: "\(pokemon.pokedexId)")
@@ -91,14 +89,16 @@ class PokemonDetailVC: UIViewController {
     }
     
     // Actions
+
+    
     @IBAction func backBtnPressed(_ sender: Any) {
         dismiss(animated: true)
     }
     
     @objc func nextEvoTapped(_ sender: UITapGestureRecognizer) {
-        print(pokemon.nextEvoName, pokemon.nextEvoId, pokemon.pokedexId)
+        
         if pokemon.nextEvoName != "" , pokemon.nextEvoId != "\(self.pokemon.pokedexId)"{
-            print("here I am")
+            
             let pokeNew = Pokemon(_name: pokemon.nextEvoName, _pokedexId: Int(pokemon.nextEvoId))
             self.pokemon = pokeNew
             self.viewDidLoad()
@@ -122,6 +122,8 @@ class PokemonDetailVC: UIViewController {
     
     
     func updateUI() {
+        
+        
         weightLbl.text = pokemon.weight
         heightLbl.text = pokemon.height
         baseAttackLbl.text = pokemon.attack
@@ -130,7 +132,6 @@ class PokemonDetailVC: UIViewController {
         DescriptionLbl.text = pokemon.description
         nextEvoLbl.text = pokemon.nextEvolutionTxt
         
-
         
     }
 

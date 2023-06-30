@@ -20,7 +20,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     @IBOutlet weak var upperBarHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var upperBarHeightLandscapeConstraint: NSLayoutConstraint!
-    
     @IBOutlet weak var pokedexCenterConstraint: NSLayoutConstraint!
     
     var musicPlayer: AVAudioPlayer!
@@ -38,7 +37,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
         searchBar.backgroundColor = .white
         
-//        initAudio()
+        initAudio()
         parsePokemonCSV()
         searchBar.returnKeyType = UIReturnKeyType.done
         
@@ -167,7 +166,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             musicPlayer = try AVAudioPlayer(contentsOf: URL(string: path)!)
             musicPlayer.prepareToPlay()
             musicPlayer.numberOfLoops = -1
-            musicPlayer.play()
+//            musicPlayer.play()
             
         } catch let err as NSError {
             print(err.localizedDescription.debugDescription)

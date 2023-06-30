@@ -192,10 +192,10 @@ class Pokemon {
     }
     
     func loadEvolutionData(completed: @escaping downloadComplete) {
-        print("why am I called so early? :(", self._nextEvoName)
+        
         
         if let nextEvoName = self._nextEvoName as? String {
-            print("I am here with", nextEvoName)
+            
             AF.request("\(URL_GLITCH_API)\(nextEvoName)").responseJSON {(response) in
                 
                 if let dictList = response.value as? [Dictionary<String,AnyObject>], dictList.count > 0 {
@@ -203,8 +203,9 @@ class Pokemon {
                     if let number = dict["number"] as? String {
                         
                         self._nextEvoId = number
-                        print(self._nextEvoId)
-                        print("self", self._nextEvoId, self._nextEvoName)
+                        
+                        
+                        
                     }
                     if let sprite = dict["sprite"] as? String {
                         self._nextEvoSprite = sprite
@@ -215,7 +216,7 @@ class Pokemon {
                 completed()
             }
         } else {
-            print("didn't find anything...")
+            
             completed()
         }
         
