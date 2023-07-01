@@ -152,7 +152,8 @@ class PokemonDetailVC: UIViewController {
                     }
                 } catch  {
                     print("couldn't load the nextEvo image:")
-                    self.nextEvoImg.image = UIImage(named: "\(self.pokemon.nextEvoId)")
+                        self.nextEvoImg.image = UIImage(named: "\(self.pokemon.nextEvoId)")
+
                 }
             }
             
